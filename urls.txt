@@ -1,0 +1,8 @@
+# Put one URL per line.
+# Supported:
+# - Xiaohongshu / Rednote post URLs
+# - Public WeChat article URLs
+#
+# Example:
+# https://www.xiaohongshu.com/explore/xxxxxx
+# https://mp.weixin.qq.com/s?__biz=...&mid=...&sn=...

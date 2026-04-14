@@ -1,0 +1,47 @@
+# Note Analysis
+
+## Compact Summary
+
+{{ report.compact_summary }}
+
+## Recurring Themes
+
+{% if report.recurring_themes %}
+{% for item in report.recurring_themes %}
+- {{ item.theme }}: {{ item.count }} notes
+{% endfor %}
+{% else %}
+- No recurring themes detected
+{% endif %}
+
+## Frequently Mentioned Products Or Topics
+
+{% if report.frequent_topics %}
+{% for item in report.frequent_topics %}
+- {{ item.topic }}: mentioned in {{ item.note_mentions }} notes
+{% endfor %}
+{% else %}
+- No repeated topics detected
+{% endif %}
+
+## Signals Worth Deeper Research
+
+{% if report.research_signals %}
+{% for signal in report.research_signals %}
+- {{ signal }}
+{% endfor %}
+{% else %}
+- No obvious follow-up signals detected
+{% endif %}
+
+## Notes Reviewed
+
+- Total notes: {{ report.note_count }}
+
+{% if report.notes %}
+{% for note in report.notes %}
+- {{ note.title }} (`{{ note.filename }}`){% if note.published %} - {{ note.published }}{% endif %}{% if note.tags %} - tags: {{ note.tags | join(", ") }}{% endif %}
+{% endfor %}
+{% else %}
+- No notes found
+{% endif %}

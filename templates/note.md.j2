@@ -1,0 +1,43 @@
+# {{ post.obsidian_title }}
+
+- Source: [Original Post]({{ post.url or "" }})
+- Author: {{ post.author.name or "Unknown" }}
+- Published: {{ post.published_date or "Unknown" }}
+
+## Summary
+
+{{ post.summary }}
+
+## Key Insights
+
+{% if post.key_insights %}
+{% for insight in post.key_insights %}
+- {{ insight }}
+{% endfor %}
+{% else %}
+- No clear insights extracted.
+{% endif %}
+
+## Tags
+
+{% if post.tags %}
+{% for tag in post.tags %}
+- #{{ tag }}
+{% endfor %}
+{% else %}
+- No tags
+{% endif %}
+
+## Original Content
+
+{% if post.content %}
+{{ post.content }}
+{% else %}
+No content captured.
+{% endif %}
+
+{% if post.transcript %}
+## Transcript
+
+{{ post.transcript }}
+{% endif %}
