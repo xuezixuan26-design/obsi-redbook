@@ -118,6 +118,22 @@ After installation:
 - Copy or download the generated note
 - If you configure a vault name in the extension options, use `Send To Obsidian`
 
+## Chrome Extension Publishing Prep
+
+This repository now includes the basic assets needed for broader sharing:
+
+- extension icons in `extension/icons/`
+- Chrome Web Store draft copy in [STORE_LISTING.md](./STORE_LISTING.md)
+- privacy statement in [PRIVACY.md](./PRIVACY.md)
+- extension-specific notes in [extension/README.md](./extension/README.md)
+
+For the next publishing step, you can:
+
+1. Load the extension locally from `extension/`
+2. Test capture on Xiaohongshu and WeChat pages
+3. Zip the `extension/` folder for submission packaging
+4. Reuse the draft text from `STORE_LISTING.md` when creating the Chrome Web Store listing
+
 ## Usage
 
 ### Fetch One Xiaohongshu Post
