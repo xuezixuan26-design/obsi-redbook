@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsi Redbook Clipper</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Obsi Redbook Clipper</p>
+          <h1>Page Capture</h1>
+        </div>
+        <a class="link" href="options.html" target="_blank">Options</a>
+      </header>
+
+      <section id="statusCard" class="card status-card">
+        <p id="statusText">Open a Xiaohongshu post or public WeChat article, then click refresh.</p>
+      </section>
+
+      <section id="previewCard" class="card hidden">
+        <h2 id="title"></h2>
+        <ul class="meta">
+          <li><span>Source</span><strong id="sourceType"></strong></li>
+          <li><span>Author</span><strong id="author"></strong></li>
+          <li><span>Published</span><strong id="published"></strong></li>
+        </ul>
+        <p id="summary" class="summary"></p>
+        <div class="tags" id="tags"></div>
+      </section>
+
+      <section class="actions">
+        <button id="refreshBtn" class="primary" type="button">Refresh</button>
+        <button id="copyBtn" type="button" disabled>Copy Markdown</button>
+        <button id="downloadMarkdownBtn" type="button" disabled>Download .md</button>
+        <button id="downloadJsonBtn" type="button" disabled>Download .json</button>
+        <button id="obsidianBtn" type="button" disabled>Send To Obsidian</button>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

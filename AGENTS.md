@@ -14,6 +14,7 @@ This repository is a Codex-native Python workflow for importing Xiaohongshu (Red
   - `batch_import.py`: orchestration for batch fetch -> optional transcription -> render.
   - `analyze_notes.py`: deterministic local analysis of generated Markdown notes.
 - `templates/`: Jinja2 templates for rendered notes and analysis reports.
+- `extension/`: Chrome extension MVP for in-browser capture and export.
 - `data/`: local working data only.
   - `raw/`: fetched HTML and normalized JSON.
   - `media/`: downloaded media, extracted audio, transcripts.
@@ -42,6 +43,7 @@ This repository is a Codex-native Python workflow for importing Xiaohongshu (Red
 - Render one note: `python scripts/render_note.py --input data/raw/post.json`
 - Batch import: `python scripts/batch_import.py --input-file urls.txt --cookies data/cookies.txt`
 - Analyze notes: `python scripts/analyze_notes.py --notes-dir data/notes --output data/notes/_analysis.md`
+- Load browser extension: open `chrome://extensions` and load the `extension/` directory unpacked
 
 ## Tests
 

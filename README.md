@@ -1,38 +1,55 @@
-# xhs-codex-importer
+# Obsi Redbook
 
-A Codex-native Python workflow for importing Xiaohongshu (Rednote) posts and public WeChat articles into structured Markdown notes for Obsidian.
+Clip Xiaohongshu (Rednote) posts and public WeChat articles into Obsidian-friendly Markdown.
 
-## What It Does
+This repository now has two usable surfaces:
 
-- Fetches Xiaohongshu post pages using exported browser cookies
-- Fetches public WeChat article pages without browser automation
-- Normalizes both sources into a shared JSON shape
-- Renders concise, Obsidian-friendly Markdown notes
-- Optionally extracts and transcribes video audio
-- Batch imports mixed URL lists
-- Generates deterministic local analysis reports from saved notes
+- A Python workflow for batch import, optional transcription, and note analysis
+- A Chrome extension MVP for in-browser capture, preview, copy, download, and optional Obsidian handoff
 
-## Design Principles
+## Features
 
-- Python `3.11+`
-- No browser automation
-- No backend service dependency
-- Source fetching isolated to source-specific fetch scripts
-- Markdown rendering isolated to `scripts/render_note.py`
-- Transcription isolated to `scripts/transcribe_audio.py`
-- Simple local analysis first
+### Python Workflow
+
+- Fetch Xiaohongshu posts with exported browser cookies
+- Fetch public WeChat articles without browser automation
+- Normalize both sources into a shared JSON shape
+- Render concise Markdown notes for Obsidian
+- Optionally extract and transcribe video audio
+- Batch import mixed URL lists
+- Generate deterministic local analysis reports from saved notes
+
+### Chrome Extension
+
+- Works on Xiaohongshu post pages and public WeChat article pages
+- Extracts content directly from the open page
+- Shows a quick preview in the popup
+- Copies Markdown to clipboard
+- Downloads Markdown or JSON
+- Optionally opens an `obsidian://` link when a vault name is configured
 
 ## Repository Layout
 
 ```text
 .
 ├── AGENTS.md
+├── LICENSE
 ├── README.md
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
 ├── pytest.ini
 ├── urls.txt
+├── extension/
+│   ├── manifest.json
+│   ├── shared.js
+│   ├── content.js
+│   ├── popup.html
+│   ├── popup.css
+│   ├── popup.js
+│   ├── options.html
+│   ├── options.css
+│   └── options.js
 ├── scripts/
 │   ├── fetch_xhs.py
 │   ├── fetch_wechat.py
@@ -58,7 +75,7 @@ A Codex-native Python workflow for importing Xiaohongshu (Rednote) posts and pub
     └── test_analyze_notes.py
 ```
 
-## Setup
+## Python Setup
 
 1. Create a virtual environment:
 
@@ -86,14 +103,20 @@ A Codex-native Python workflow for importing Xiaohongshu (Rednote) posts and pub
    OBSIDIAN_IMPORT_SUBDIR=Inbox\Xiaohongshu
    ```
 
-## Cookies
+## Chrome Extension Setup
 
-For Xiaohongshu fetching, place exported cookies in `data/cookies.txt`.
+1. Open Chrome and go to `chrome://extensions`
+2. Turn on `Developer mode`
+3. Click `Load unpacked`
+4. Select the `extension/` folder from this repository
 
-Supported formats:
+After installation:
 
-- Netscape cookie export format
-- Raw cookie string such as `a=1; web_session=...; xsecappid=...`
+- Open a Xiaohongshu post or public WeChat article
+- Click the extension icon
+- Refresh the popup preview
+- Copy or download the generated note
+- If you configure a vault name in the extension options, use `Send To Obsidian`
 
 ## Usage
 
@@ -130,14 +153,6 @@ python scripts/batch_import.py `
   --cookies data/cookies.txt
 ```
 
-This pipeline will:
-
-1. Detect the source type from each URL
-2. Fetch and normalize the item
-3. Optionally transcribe video when enabled
-4. Render the final Markdown note
-5. Print a batch summary with success, failure, and note paths
-
 Enable transcription for video items:
 
 ```powershell
@@ -155,20 +170,6 @@ python scripts/transcribe_audio.py `
   --source data/media/sample.mp4
 ```
 
-Or from a direct media URL:
-
-```powershell
-python scripts/transcribe_audio.py `
-  --source "https://example.com/sample.mp4" `
-  --media-dir data/media
-```
-
-Notes:
-
-- Install `ffmpeg` and ensure it is on `PATH`
-- The default backend is a local placeholder
-- Future real backends can be added without changing fetch or render logic
-
 ### Analyze Saved Notes
 
 ```powershell
@@ -177,42 +178,15 @@ python scripts/analyze_notes.py `
   --output data/notes/_analysis.md
 ```
 
-The analysis report includes:
+## Security Notes
 
-- recurring themes
-- frequently mentioned products or topics
-- possible signals worth deeper research
-- a compact summary for the user
-
-## Normalized Data Shape
-
-The fetchers normalize content into a shared structure like:
-
-```json
-{
-  "url": "https://www.xiaohongshu.com/explore/abc123",
-  "note_id": "abc123",
-  "title": "Example title",
-  "author": {
-    "name": "Author",
-    "user_id": "user123",
-    "profile_url": ""
-  },
-  "content": "Body text",
-  "tags": ["travel", "shanghai"],
-  "images": ["https://..."],
-  "video_url": null,
-  "published_at": "2024-06-01T12:00:00+00:00",
-  "source_type": "xhs",
-  "raw_state_path": "data/raw/abc123.json"
-}
-```
-
-WeChat articles use the same general shape, usually with empty `tags` and article images extracted into `images`.
+- Never commit `.env`, cookies, API keys, or local vault paths
+- `data/cookies.txt` must remain local-only
+- Generated data in `data/raw/`, `data/media/`, and `data/notes/` is ignored by default
 
 ## Testing
 
-Run all tests:
+Run all Python tests:
 
 ```powershell
 python -m pytest
@@ -227,8 +201,6 @@ Current coverage includes:
 - transcription path and command helpers
 - note analysis parsing and summarization
 
-## Security Notes
+## License
 
-- Never commit `.env`, cookies, API keys, or local vault paths
-- `data/cookies.txt` must remain local-only
-- Generated data in `data/raw/`, `data/media/`, and `data/notes/` is ignored by default
+MIT

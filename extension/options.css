@@ -1,0 +1,77 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "PingFang SC", sans-serif;
+  background: #f6f8fc;
+  color: #18212c;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  padding: 32px 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid rgba(24, 33, 44, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 14px 38px rgba(24, 33, 44, 0.08);
+  max-width: 540px;
+  padding: 24px;
+  width: 100%;
+}
+
+.eyebrow {
+  color: #b25b2d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+.intro {
+  color: #475569;
+  line-height: 1.5;
+}
+
+.field {
+  display: block;
+  margin: 16px 0;
+}
+
+.field span {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input {
+  border: 1px solid rgba(24, 33, 44, 0.12);
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+button {
+  background: linear-gradient(135deg, #ff784f 0%, #e44e3a 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 16px;
+}
+
+.status {
+  color: #25603b;
+  min-height: 20px;
+}
