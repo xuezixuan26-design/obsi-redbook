@@ -133,6 +133,7 @@ For the next publishing step, you can:
 2. Test capture on Xiaohongshu and WeChat pages
 3. Zip the `extension/` folder for submission packaging
 4. Reuse the draft text from `STORE_LISTING.md` when creating the Chrome Web Store listing
+5. Follow [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md) and [CHROME_STORE_SUBMISSION.md](./CHROME_STORE_SUBMISSION.md) during submission
 
 ## Usage
 
