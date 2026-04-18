@@ -1,0 +1,37 @@
+{
+  "enrichment_version": "v1",
+  "notes_seen": 1,
+  "notes_enriched": 1,
+  "written_notes": [
+    "data\\analysis\\enriched-notes\\sample-001-杭州面包店巡礼.md"
+  ],
+  "records": [
+    {
+      "title": "杭州面包店巡礼",
+      "task_count": 3,
+      "transcript_update": "Prepared a transcript request and checked for existing sidecar media artifacts.",
+      "research_update": "Prepared a background research brief with likely context gaps and reference targets.",
+      "deep_summary_update": "Prepared a deeper synthesis brief with reusable insights and follow-up prompts.",
+      "actions": [
+        {
+          "task_type": "background_research",
+          "agent_role": "researcher",
+          "status": "completed",
+          "result_summary": "Prepared a background research brief with likely context gaps and reference targets."
+        },
+        {
+          "task_type": "deep_summary",
+          "agent_role": "synthesizer",
+          "status": "completed",
+          "result_summary": "Prepared a deeper synthesis brief with reusable insights and follow-up prompts."
+        },
+        {
+          "task_type": "transcribe_media",
+          "agent_role": "media-analyst",
+          "status": "completed",
+          "result_summary": "Prepared a transcript request and checked for existing sidecar media artifacts."
+        }
+      ]
+    }
+  ]
+}

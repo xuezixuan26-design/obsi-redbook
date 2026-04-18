@@ -1,0 +1,47 @@
+{
+  "adapter": "deerflow-runtime",
+  "dry_run": true,
+  "command_template": "deerflow run --input {input} --output {output}",
+  "request_count": 3,
+  "executions": [
+    {
+      "request": "data\\analysis\\deerflow-requests\\01-background_research.json",
+      "result": "data\\analysis\\deerflow-results\\01-background_research.json",
+      "status": "planned",
+      "command": [
+        "deerflow",
+        "run",
+        "--input",
+        "data\\analysis\\deerflow-requests\\01-background_research.json",
+        "--output",
+        "data\\analysis\\deerflow-results\\01-background_research.json"
+      ]
+    },
+    {
+      "request": "data\\analysis\\deerflow-requests\\02-deep_summary.json",
+      "result": "data\\analysis\\deerflow-results\\02-deep_summary.json",
+      "status": "planned",
+      "command": [
+        "deerflow",
+        "run",
+        "--input",
+        "data\\analysis\\deerflow-requests\\02-deep_summary.json",
+        "--output",
+        "data\\analysis\\deerflow-results\\02-deep_summary.json"
+      ]
+    },
+    {
+      "request": "data\\analysis\\deerflow-requests\\03-transcribe_media.json",
+      "result": "data\\analysis\\deerflow-results\\03-transcribe_media.json",
+      "status": "planned",
+      "command": [
+        "deerflow",
+        "run",
+        "--input",
+        "data\\analysis\\deerflow-requests\\03-transcribe_media.json",
+        "--output",
+        "data\\analysis\\deerflow-results\\03-transcribe_media.json"
+      ]
+    }
+  ]
+}

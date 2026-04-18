@@ -1,0 +1,51 @@
+---
+title: "{{ note.title }}"
+note_id: "{{ note.note_id }}"
+author: "{{ note.author }}"
+author_id: "{{ note.author_id }}"
+publish_time: "{{ note.publish_time }}"
+source_url: "{{ note.source_url }}"
+tags:
+{% for tag in obsidian_tags %}
+  - "{{ tag }}"
+{% endfor %}
+---
+
+# {{ note.title }}
+
+## Summary
+
+{{ note.content }}
+
+## Metadata
+
+- Author: {{ note.author or "Unknown" }}
+- Publish Time: {{ note.publish_time or "Unknown" }}
+- Source: {{ note.source_url or "N/A" }}
+
+{% if note.images %}
+## Images
+
+{% for image in note.images %}
+- {{ image }}
+{% endfor %}
+{% endif %}
+{% if note.video_urls %}
+## Video URLs
+
+{% for video in note.video_urls %}
+- {{ video }}
+{% endfor %}
+{% endif %}
+{% if note.audio_urls %}
+## Audio URLs
+
+{% for audio in note.audio_urls %}
+- {{ audio }}
+{% endfor %}
+{% endif %}
+{% if note.transcript %}
+## Transcript
+
+{{ note.transcript }}
+{% endif %}

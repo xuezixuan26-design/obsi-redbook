@@ -1,0 +1,117 @@
+{
+  "adapter_version": "v1",
+  "source_workflow_version": "v1",
+  "task_count": 3,
+  "clusters": [
+    {
+      "cluster": "xhs/杭州",
+      "count": 1,
+      "keywords": [
+        "https",
+        "example",
+        "com",
+        "bakery",
+        "img",
+        "jpg"
+      ],
+      "titles": [
+        "杭州面包店巡礼"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "agent_role": "researcher",
+      "task_type": "background_research",
+      "note_title": "杭州面包店巡礼",
+      "source_url": "data\\raw\\sample_note.html",
+      "priority": 4,
+      "instructions": [
+        "Focus on note: 杭州面包店巡礼",
+        "Use the note summary as starting context: # 杭州面包店巡礼",
+        "Prioritize these keywords: https, example, com, bakery, img, jpg",
+        "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+        "Look for factual background that strengthens the note without drifting too far from the original topic.",
+        "Capture concise references, trends, competitors, or market context relevant to the note."
+      ],
+      "metadata": {
+        "keywords": [
+          "https",
+          "example",
+          "com",
+          "bakery",
+          "img",
+          "jpg"
+        ],
+        "reasons": [
+          "contains media or transcript hints",
+          "rich tag metadata",
+          "contains synthesis-oriented language"
+        ],
+        "score": 4
+      }
+    },
+    {
+      "agent_role": "synthesizer",
+      "task_type": "deep_summary",
+      "note_title": "杭州面包店巡礼",
+      "source_url": "data\\raw\\sample_note.html",
+      "priority": 4,
+      "instructions": [
+        "Focus on note: 杭州面包店巡礼",
+        "Use the note summary as starting context: # 杭州面包店巡礼",
+        "Prioritize these keywords: https, example, com, bakery, img, jpg",
+        "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+        "Produce a sharper synthesis than the original short summary.",
+        "Highlight reusable insights, patterns, and possible follow-up topics for Obsidian."
+      ],
+      "metadata": {
+        "keywords": [
+          "https",
+          "example",
+          "com",
+          "bakery",
+          "img",
+          "jpg"
+        ],
+        "reasons": [
+          "contains media or transcript hints",
+          "rich tag metadata",
+          "contains synthesis-oriented language"
+        ],
+        "score": 4
+      }
+    },
+    {
+      "agent_role": "media-analyst",
+      "task_type": "transcribe_media",
+      "note_title": "杭州面包店巡礼",
+      "source_url": "data\\raw\\sample_note.html",
+      "priority": 4,
+      "instructions": [
+        "Focus on note: 杭州面包店巡礼",
+        "Use the note summary as starting context: # 杭州面包店巡礼",
+        "Prioritize these keywords: https, example, com, bakery, img, jpg",
+        "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+        "Check whether local media files or sidecar transcripts already exist before creating new artifacts.",
+        "If media exists, produce a transcript-ready asset for downstream note enrichment."
+      ],
+      "metadata": {
+        "keywords": [
+          "https",
+          "example",
+          "com",
+          "bakery",
+          "img",
+          "jpg"
+        ],
+        "reasons": [
+          "contains media or transcript hints",
+          "rich tag metadata",
+          "contains synthesis-oriented language"
+        ],
+        "score": 4
+      }
+    }
+  ]
+}

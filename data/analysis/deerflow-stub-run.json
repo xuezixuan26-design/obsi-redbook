@@ -1,0 +1,224 @@
+{
+  "stub_version": "v1",
+  "source_adapter_version": "v1",
+  "total_tasks": 3,
+  "agents_used": [
+    "media-analyst",
+    "researcher",
+    "synthesizer"
+  ],
+  "grouped_results": {
+    "researcher": [
+      {
+        "note_title": "杭州面包店巡礼",
+        "task_type": "background_research",
+        "agent_role": "researcher",
+        "status": "completed",
+        "priority": 4,
+        "source_url": "data\\raw\\sample_note.html",
+        "result_summary": "Prepared a background research brief with likely context gaps and reference targets.",
+        "suggested_output_path": "data/analysis/stub-background_research.md",
+        "instructions": [
+          "Focus on note: 杭州面包店巡礼",
+          "Use the note summary as starting context: # 杭州面包店巡礼",
+          "Prioritize these keywords: https, example, com, bakery, img, jpg",
+          "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+          "Look for factual background that strengthens the note without drifting too far from the original topic.",
+          "Capture concise references, trends, competitors, or market context relevant to the note."
+        ],
+        "metadata": {
+          "keywords": [
+            "https",
+            "example",
+            "com",
+            "bakery",
+            "img",
+            "jpg"
+          ],
+          "reasons": [
+            "contains media or transcript hints",
+            "rich tag metadata",
+            "contains synthesis-oriented language"
+          ],
+          "score": 4
+        }
+      }
+    ],
+    "synthesizer": [
+      {
+        "note_title": "杭州面包店巡礼",
+        "task_type": "deep_summary",
+        "agent_role": "synthesizer",
+        "status": "completed",
+        "priority": 4,
+        "source_url": "data\\raw\\sample_note.html",
+        "result_summary": "Prepared a deeper synthesis brief with reusable insights and follow-up prompts.",
+        "suggested_output_path": "data/analysis/stub-deep_summary.md",
+        "instructions": [
+          "Focus on note: 杭州面包店巡礼",
+          "Use the note summary as starting context: # 杭州面包店巡礼",
+          "Prioritize these keywords: https, example, com, bakery, img, jpg",
+          "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+          "Produce a sharper synthesis than the original short summary.",
+          "Highlight reusable insights, patterns, and possible follow-up topics for Obsidian."
+        ],
+        "metadata": {
+          "keywords": [
+            "https",
+            "example",
+            "com",
+            "bakery",
+            "img",
+            "jpg"
+          ],
+          "reasons": [
+            "contains media or transcript hints",
+            "rich tag metadata",
+            "contains synthesis-oriented language"
+          ],
+          "score": 4
+        }
+      }
+    ],
+    "media-analyst": [
+      {
+        "note_title": "杭州面包店巡礼",
+        "task_type": "transcribe_media",
+        "agent_role": "media-analyst",
+        "status": "completed",
+        "priority": 4,
+        "source_url": "data\\raw\\sample_note.html",
+        "result_summary": "Prepared a transcript request and checked for existing sidecar media artifacts.",
+        "suggested_output_path": "data/analysis/stub-transcribe_media.md",
+        "instructions": [
+          "Focus on note: 杭州面包店巡礼",
+          "Use the note summary as starting context: # 杭州面包店巡礼",
+          "Prioritize these keywords: https, example, com, bakery, img, jpg",
+          "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+          "Check whether local media files or sidecar transcripts already exist before creating new artifacts.",
+          "If media exists, produce a transcript-ready asset for downstream note enrichment."
+        ],
+        "metadata": {
+          "keywords": [
+            "https",
+            "example",
+            "com",
+            "bakery",
+            "img",
+            "jpg"
+          ],
+          "reasons": [
+            "contains media or transcript hints",
+            "rich tag metadata",
+            "contains synthesis-oriented language"
+          ],
+          "score": 4
+        }
+      }
+    ]
+  },
+  "completed_tasks": [
+    {
+      "note_title": "杭州面包店巡礼",
+      "task_type": "background_research",
+      "agent_role": "researcher",
+      "status": "completed",
+      "priority": 4,
+      "source_url": "data\\raw\\sample_note.html",
+      "result_summary": "Prepared a background research brief with likely context gaps and reference targets.",
+      "suggested_output_path": "data/analysis/stub-background_research.md",
+      "instructions": [
+        "Focus on note: 杭州面包店巡礼",
+        "Use the note summary as starting context: # 杭州面包店巡礼",
+        "Prioritize these keywords: https, example, com, bakery, img, jpg",
+        "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+        "Look for factual background that strengthens the note without drifting too far from the original topic.",
+        "Capture concise references, trends, competitors, or market context relevant to the note."
+      ],
+      "metadata": {
+        "keywords": [
+          "https",
+          "example",
+          "com",
+          "bakery",
+          "img",
+          "jpg"
+        ],
+        "reasons": [
+          "contains media or transcript hints",
+          "rich tag metadata",
+          "contains synthesis-oriented language"
+        ],
+        "score": 4
+      }
+    },
+    {
+      "note_title": "杭州面包店巡礼",
+      "task_type": "deep_summary",
+      "agent_role": "synthesizer",
+      "status": "completed",
+      "priority": 4,
+      "source_url": "data\\raw\\sample_note.html",
+      "result_summary": "Prepared a deeper synthesis brief with reusable insights and follow-up prompts.",
+      "suggested_output_path": "data/analysis/stub-deep_summary.md",
+      "instructions": [
+        "Focus on note: 杭州面包店巡礼",
+        "Use the note summary as starting context: # 杭州面包店巡礼",
+        "Prioritize these keywords: https, example, com, bakery, img, jpg",
+        "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+        "Produce a sharper synthesis than the original short summary.",
+        "Highlight reusable insights, patterns, and possible follow-up topics for Obsidian."
+      ],
+      "metadata": {
+        "keywords": [
+          "https",
+          "example",
+          "com",
+          "bakery",
+          "img",
+          "jpg"
+        ],
+        "reasons": [
+          "contains media or transcript hints",
+          "rich tag metadata",
+          "contains synthesis-oriented language"
+        ],
+        "score": 4
+      }
+    },
+    {
+      "note_title": "杭州面包店巡礼",
+      "task_type": "transcribe_media",
+      "agent_role": "media-analyst",
+      "status": "completed",
+      "priority": 4,
+      "source_url": "data\\raw\\sample_note.html",
+      "result_summary": "Prepared a transcript request and checked for existing sidecar media artifacts.",
+      "suggested_output_path": "data/analysis/stub-transcribe_media.md",
+      "instructions": [
+        "Focus on note: 杭州面包店巡礼",
+        "Use the note summary as starting context: # 杭州面包店巡礼",
+        "Prioritize these keywords: https, example, com, bakery, img, jpg",
+        "Why this task was queued: contains media or transcript hints, rich tag metadata, contains synthesis-oriented language",
+        "Check whether local media files or sidecar transcripts already exist before creating new artifacts.",
+        "If media exists, produce a transcript-ready asset for downstream note enrichment."
+      ],
+      "metadata": {
+        "keywords": [
+          "https",
+          "example",
+          "com",
+          "bakery",
+          "img",
+          "jpg"
+        ],
+        "reasons": [
+          "contains media or transcript hints",
+          "rich tag metadata",
+          "contains synthesis-oriented language"
+        ],
+        "score": 4
+      }
+    }
+  ]
+}

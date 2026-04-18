@@ -1,0 +1,136 @@
+{
+  "workflow_version": "v1",
+  "next_best_actions": [
+    {
+      "title": "杭州面包店巡礼",
+      "source_url": "data\\raw\\sample_note.html",
+      "score": 4,
+      "summary": "# 杭州面包店巡礼",
+      "keywords": [
+        "https",
+        "example",
+        "com",
+        "bakery",
+        "img",
+        "jpg"
+      ],
+      "reasons": [
+        "contains media or transcript hints",
+        "rich tag metadata",
+        "contains synthesis-oriented language"
+      ],
+      "should_transcribe": true,
+      "should_enrich": true,
+      "should_deep_dive": true,
+      "recommended_actions": [
+        "transcribe_media",
+        "background_research",
+        "deep_summary"
+      ]
+    }
+  ],
+  "transcription_queue": [
+    {
+      "title": "杭州面包店巡礼",
+      "source_url": "data\\raw\\sample_note.html",
+      "score": 4,
+      "summary": "# 杭州面包店巡礼",
+      "keywords": [
+        "https",
+        "example",
+        "com",
+        "bakery",
+        "img",
+        "jpg"
+      ],
+      "reasons": [
+        "contains media or transcript hints",
+        "rich tag metadata",
+        "contains synthesis-oriented language"
+      ],
+      "should_transcribe": true,
+      "should_enrich": true,
+      "should_deep_dive": true,
+      "recommended_actions": [
+        "transcribe_media",
+        "background_research",
+        "deep_summary"
+      ]
+    }
+  ],
+  "research_queue": [
+    {
+      "title": "杭州面包店巡礼",
+      "source_url": "data\\raw\\sample_note.html",
+      "score": 4,
+      "summary": "# 杭州面包店巡礼",
+      "keywords": [
+        "https",
+        "example",
+        "com",
+        "bakery",
+        "img",
+        "jpg"
+      ],
+      "reasons": [
+        "contains media or transcript hints",
+        "rich tag metadata",
+        "contains synthesis-oriented language"
+      ],
+      "should_transcribe": true,
+      "should_enrich": true,
+      "should_deep_dive": true,
+      "recommended_actions": [
+        "transcribe_media",
+        "background_research",
+        "deep_summary"
+      ]
+    }
+  ],
+  "deep_dive_queue": [
+    {
+      "title": "杭州面包店巡礼",
+      "source_url": "data\\raw\\sample_note.html",
+      "score": 4,
+      "summary": "# 杭州面包店巡礼",
+      "keywords": [
+        "https",
+        "example",
+        "com",
+        "bakery",
+        "img",
+        "jpg"
+      ],
+      "reasons": [
+        "contains media or transcript hints",
+        "rich tag metadata",
+        "contains synthesis-oriented language"
+      ],
+      "should_transcribe": true,
+      "should_enrich": true,
+      "should_deep_dive": true,
+      "recommended_actions": [
+        "transcribe_media",
+        "background_research",
+        "deep_summary"
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": "xhs/杭州",
+      "count": 1,
+      "keywords": [
+        "https",
+        "example",
+        "com",
+        "bakery",
+        "img",
+        "jpg"
+      ],
+      "titles": [
+        "杭州面包店巡礼"
+      ]
+    }
+  ]
+}

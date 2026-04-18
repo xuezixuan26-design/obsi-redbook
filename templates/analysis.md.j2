@@ -1,0 +1,54 @@
+# Note Corpus Analysis
+
+- Notes analyzed: {{ note_count }}
+
+## Workflow Plan
+
+- Next actions queued: {{ workflow_plan.next_best_actions | length }}
+- Transcription queue: {{ workflow_plan.transcription_queue | length }}
+- Research queue: {{ workflow_plan.research_queue | length }}
+- Deep-dive queue: {{ workflow_plan.deep_dive_queue | length }}
+
+{% for item in workflow_plan.next_best_actions %}
+### Action: {{ item.title }}
+
+- Score: {{ item.score }}
+- Recommended: {{ item.recommended_actions | join(", ") }}
+- Why: {{ item.reasons | join(", ") }}
+
+{% endfor %}
+## Priority Queue
+
+{% for item in priorities %}
+### {{ item.title }}
+
+- Score: {{ item.score }}
+- Why: {{ item.reasons | join(", ") }}
+- Summary: {{ item.summary }}
+- Recommended: {{ item.recommended_actions | join(", ") }}
+
+{% endfor %}
+## Clusters
+
+{% for cluster in clusters %}
+### {{ cluster.cluster }}
+
+- Count: {{ cluster.count }}
+- Keywords: {{ cluster.keywords | join(", ") }}
+
+{% for title in cluster.titles %}
+- {{ title }}
+{% endfor %}
+
+{% endfor %}
+## Note Summaries
+
+{% for note in notes %}
+### {{ note.title }}
+
+- Tags: {{ note.tags | join(", ") }}
+- Keywords: {{ note.keywords | join(", ") }}
+- Source: {{ note.source_url or "N/A" }}
+- Summary: {{ note.summary }}
+
+{% endfor %}

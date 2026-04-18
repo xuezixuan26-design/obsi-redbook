@@ -1,0 +1,28 @@
+{
+  "note_id": "sample-001",
+  "source_url": "data\\raw\\sample_note.html",
+  "title": "杭州面包店巡礼",
+  "author": "面包观察员",
+  "author_id": "author-001",
+  "publish_time": "2026-04-18 10:30:00",
+  "content": "这周末去了三家杭州面包店，顺手比较了可颂、吐司和咖啡的出品。最后一站还录了一段口播，想留着以后整理成选题。",
+  "tags": [
+    "杭州",
+    "面包",
+    "咖啡"
+  ],
+  "images": [
+    "https://img.example.com/bakery-1.jpg",
+    "https://img.example.com/bakery-2.jpg"
+  ],
+  "video_urls": [
+    "https://video.example.com/bakery-walkthrough.mp4"
+  ],
+  "audio_urls": [
+    "https://audio.example.com/bakery-thoughts.mp3"
+  ],
+  "transcript": "",
+  "raw_state_keys": [
+    "note"
+  ]
+}
